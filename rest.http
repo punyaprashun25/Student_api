@@ -1,0 +1,30 @@
+###Getting a list of all products
+GET http://localhost:3000/students
+
+###creating a product
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+    "name": "Punya Prashun",
+    "roll_no": "2001500100077",
+    "email_id": "punya.prasun.cs24@iilmcet.ac.in"
+}
+
+###GET a product by id
+GET http://localhost:3000/students/64f32d5582d503f1a4069525
+
+###updating a product by id
+PATCH  http://localhost:3000/students/64f32d5582d503f1a4069525
+Content-Type: application/json
+
+{
+    "name": "Iphone 12 Pro",
+    "price": 1699
+}
+
+###Deleting a product by id
+DELETE  http://localhost:3000/students/64f32dfed89fd9e867982397
+
+###404 route for error handling
+GET http://localhost:3000/abc
